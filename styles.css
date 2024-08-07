@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #9fa110;
+    color: #fff;
+    padding: 10px;
+    position: sticky;
+    top: 0; /* Ensure header sticks to the top */
+    z-index: 1000; /* Ensure header stays on top of other elements */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+}
+
+.nav-left a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right p {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 20px;
+    background: linear-gradient(to right, red, blue, green), red;
+    background-clip: text;
+    color: transparent;
+}
+
+.photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); 
+    background-color: #333;
+}
+
+.photo-container {
+    text-align: center;
+    position: relative;
+}
+
+.download-btn {
+    border: solid #007bff 4px;
+    color: #007bff;
+    padding: 8px;
+    margin: 30px auto;
+    font-size: 20px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #007bff;
+    color: #f4f4f4;
+}
+
+.download-btn::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    background: red;
+    transform: translate(-50%, -50%);
+    z-index: -5;
+    padding: 3px;
+}
+
+.photo-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info {
+    margin-top: 20px;
+    color: #f4f4f4;
+    max-width: 80%;
+    margin: auto;
+}
+
+.info h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.info p {
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.academics-training {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.academics, .training {
+    width: 45%;
+}
+
+.academics h2, .training h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4ca0a3;
+}
+
+.academic-details, .training-details {
+    margin-top: 10px;
+}
+
+.academic-details h3, .training-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.academic-details p, .training-details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.experience {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.experience h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #4ca0a3;
+}
+
+.work-experience {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.work-name, .work-details {
+    width: 45%;
+}
+
+.work-name h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.work-details {
+    text-align: right;
+}
+
+.work-details p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.projects {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 4px;
+}
+
+.project-h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-left: 13%;
+    color: #4ca0a3;
+}
+
+.project-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.view-all-button {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: #007bff;
+    border: solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-left: 50%;
+    margin-top: 2%;
+}
+
+.view-all-button:hover{
+    background-color: #007bff;
+    color: #f4f4f4;
+}
+
+.project-description {
+    width: 80%;
+    padding: 2%;
+}
+
+.project-description h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #4ca0a3;
+}
+
+.project-description p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #333;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    width: 100%;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex: 0 0 100%;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-indicators span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .active {
+    background-color: #717171;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-icons {
+    margin: 10px 0;
+}
+
+.footer-icons a {
+    font-size: 24px;
+    margin: 0 10px;
+    display: inline-block;
+    color: white;
+}
+
+.footer-icons a:hover {
+    color: #ccc;
+}
+
+.footer-h3 {
+    font-size: 2em;
+    padding-bottom: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .academics, .training {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .work-name, .work-details {
+        width: 100%;
+    }
+
+    .project-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-left a {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-right p {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .photo-section {
+        height: auto; /* Allow photo-section to adapt its height */
+    }
+
+    .info {
+        padding: 10px;
+    }
+
+    .info h1 {
+        font-size: 1.5rem;
+    }
+
+    .info p {
+        font-size: 0.9rem;
+    }
+
+    .carousel-button {
+        font-size: 20px;
+    }
+
+    .view-all-button {
+        font-size: 0.8rem;
+    }
+
+    .footer-h3 {
+        font-size: 1.5em;
+    }
+
+    .footer-icons a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-left a, .nav-right p {
+        font-size: 18px;
+    }
+
+    .photo-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info h1 {
+        font-size: 1.2rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+    }
+
+    .academics, .training {
+        width: 100%;
+    }
+
+    .work-name, .work-details {
+        width: 100%;
+        text-align: left;
+    }
+
+    .projects {
+        padding: 10px;
+    }
+
+    .project-h2 {
+        font-size: 1.2rem;
+        margin-left: 0;
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-description {
+        width: 100%;
+    }
+
+    .carousel-button {
+        font-size: 18px;
+    }
+
+    .view-all-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .footer-h3 {
+        font-size: 1.2em;
+    }
+
+    .footer-icons a {
+        font-size: 18px;
+    }
+}
